@@ -14,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+//=============API Routes without Authentication=============================//
+Route::post('register', 'API\UserController@register');
+Route::post('login', 'API\UserController@login');
+// ============= API Routes with Authentication ============================= //
+Route::group(['middleware' => 'auth:api', 'namespace'=>'API'], function(){
+    Route::get('/userDetails', 'UserController@userDetails');
+    Route::group(['middleware' => 'user'], function(){
+        // Route::get('/userDetails', 'UserController@userDetails');
+    });
+    Route::group(['middleware' => 'admin'], function(){
+        Route::resource('/products', 'ProductController');
+    });
 });
