@@ -1,0 +1,66 @@
+/* Common css */
+.color-bg{
+    background-color: #2aa59f !important;
+}
+
+.container{
+    margin-bottom: 40px;;
+}
+
+.color-site,
+.site-link{
+    color: #228a85 !important;
+}
+.site-link:hover{
+    color: #217e79 !important;
+    text-decoration: none;
+}
+
+.navbar-collapse ul li a{
+    color: #ffffff !important;
+}
+.navbar-collapse ul li a:hover{
+    color: #d9fffb !important;
+}
+.navbar-collapse ul .active a{
+    color: #d9fffb !important;
+    font-weight: 500 !important;
+}
+.navbar-collapse ul li .dropdown-menu a:hover{
+    background: #156965;
+}
+.navbar-collapse ul li .dropdown-menu{
+    background: #2aa59f;
+}
+.site-btn{
+    background-color: #2aa59f !important;
+    color: #ffffff;
+}
+.site-btn:hover{
+    background-color: #69cac5 !important;
+}
+
+.card{
+    transition: all 0.5s;
+}
+
+.card:hover{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.72); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.72);
+}
+
+.must{
+    color: #ff0000;
+}
+
+@media screen and (min-width:992px) {
+    .navbar{
+        justify-content: space-between !important;
+    }
+    .navbar-collapse{
+        flex-grow: unset !important;
+    }
+    .navbar-collapse ul li{
+        margin-left: 5px; 
+    }
+}
