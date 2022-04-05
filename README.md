@@ -7,7 +7,7 @@ Import the database (sql) file to the database from the the databage folder.
 
 ## Backend Folder
 
-Backend folder reprents the BackEnd project of the Assignment. It is tottaly different fron the Frontend section. It is Laravel project to maintain the backend program or API. There is some steps need to do for starting the backend Projet.
+Backend folder reprents the BackEnd project of the Assignment. It is tottaly different fron the Frontend section. It is a Laravel project to maintain the backend program or API. There is some steps need to do for starting the backend Projet.
 
 ### The Steps are:
 
@@ -15,4 +15,4 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
 
         composer update
 
-2. Make a <span style="background-color:f3f3f3;">.env</span> file. You can copy the .env.example file and then rename it with .env
+2. Make a [.env] file. You can copy the .env.example file and then rename it with .env
