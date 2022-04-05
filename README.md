@@ -37,7 +37,14 @@ now the backend system is ready.
 
 The froneend folder is only for the frontend views. It is totally separate from the Backend project/folder. Just go inside the backend folder and open the "index.html" file to the browser and enjoy it.
 
+Admin and User can sing in from the same login panel in the frontend project. After registration, every person will be a user (there is only one admin here).
+
 Note: Plese start the backend project before starting the frontend project.
+
+### Emial and Password for admin login:
+
+        Admin Email: admin@admin.com
+        Admin Password: password 
 
 ## API Documentation file
 
