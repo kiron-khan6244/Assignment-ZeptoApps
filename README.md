@@ -13,4 +13,4 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
 
 1. Open the backend folder and run the following command:
 
-  > composer update
+        > composer update
