@@ -14,3 +14,5 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
 1. Open the backend folder and run the following command:
 
         composer update
+
+2. Make a .env file. You can copy the .env.example file and then rename it with .env
