@@ -278,8 +278,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 0, 'Admin', 'admin@admin.com', NULL, '$2y$10$q0JKH3Y9J4Naz8Dro/5L7eRHkO2MZB56TBXUuxs2C6Ue0VJBjOWTO', NULL, '2022-03-31 17:04:13', '2022-03-31 17:04:13'),
-(4, 1, 'Kiron Khan', 'prottasarpothe@gmail.com', NULL, '$2y$10$CcpJIP1TsVbDczX4e4fLWut5CLIzTif1h7X//jajTEV03p9e5CaNW', NULL, '2022-04-05 11:55:38', '2022-04-05 11:55:38');
+(1, 0, 'Admin', 'admin@admin.com', NULL, '$2y$10$q0JKH3Y9J4Naz8Dro/5L7eRHkO2MZB56TBXUuxs2C6Ue0VJBjOWTO', NULL, '2022-03-31 17:04:13', '2022-03-31 17:04:13');
 
 --
 -- Indexes for dumped tables
@@ -388,7 +387,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
