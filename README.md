@@ -23,6 +23,18 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
 
     Note: If any problem occur, plese run those commands:
 
+        composer dump-autoload
+
         php artisan config:cache
-        
+
         php artisan serve
+
+    Sometime you need to make a "views" folder in the storage/framework pathe if the the folder is missing.
+
+now the backend system is ready.
+
+## Frontend Folder
+
+The froneend folder is only for the frontend views. It is totally separate from the Backend project/folder. Just go inside the backend folder and open the "index.html" file to the browser and enjoy it.
+
+Note: Plese start the backend project before starting the frontend project.
