@@ -15,4 +15,4 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
 
         composer update
 
-2. Make a [.env] file. You can copy the .env.example file and then rename it with .env
+2. Make a [.env](https://laravel.com/docs) file. You can copy the .env.example file and then rename it with .env
