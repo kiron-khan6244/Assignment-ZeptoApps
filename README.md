@@ -16,3 +16,12 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
         composer update
 
 2. Make a [.env](https://laravel.com/docs) file. You can copy the [.env.example](https://laravel.com/docs) file and then rename it with [.env](https://laravel.com/docs). And then configure the [.env](https://laravel.com/docs) file.
+
+3. Then Start the project with the following command:
+
+        php artisan serve
+
+    Note: If any problem occur, plese run those commands:
+
+        php artisan config:cache
+        php artisan serve
