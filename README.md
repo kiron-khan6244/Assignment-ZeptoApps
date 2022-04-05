@@ -24,4 +24,5 @@ Backend folder reprents the BackEnd project of the Assignment. It is tottaly dif
     Note: If any problem occur, plese run those commands:
 
         php artisan config:cache
+        
         php artisan serve
