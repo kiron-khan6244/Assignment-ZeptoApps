@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', 'API\UserController@register');
 Route::post('login', 'API\UserController@login');
 Route::post('logout', 'API\UserController@logout');
-Route::get('productDetails/{id}', 'API\ProductController@productDetails');
 Route::get('allProducts', 'API\ProductController@allProducts');
+Route::get('productDetails/{id}', 'API\ProductController@productDetails');
 // ============= API Routes with Authentication ============================= //
 Route::group(['middleware' => 'auth:api', 'namespace'=>'API'], function(){
     Route::get('/userDetails', 'UserController@userDetails');

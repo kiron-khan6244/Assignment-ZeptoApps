@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "e1836009-aaab-493a-ae90-f321ca34ae29",
+		"name": "Assignment",
+		"description": "## Assignment API Collection\n\nThis collection contains request from this \\[API\\]([http://127.0.0.1:8000](http://127.0.0.1:8000))\n\nIt contains following requests:\n\n*   Register a User\n*   Login a User with Given Credential\n*   Get Details for a user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "User",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@application.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "API endpoint to ***Register*** a new User in the system.\n\n*   A successful registration will result in a ***HTTP 200*** *status code*"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@application.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "API endpoint to ***Login*** a User with the provided credentials.\n\n*   A successful registration will result in a ***HTTP 200*** *status code*\n*   Request for non existing User will return ***HTTP 400*** status"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTlkZWQ0YTNjOTFkMzVmMzA1N2UyMWQ4MTAxZDcxOGQxZjAwNWJjODg1ZjgwYzI4MTIyOGVkYThjMzdmMDI5NmRlYjg1ZjJjMzFjNjM0MjUiLCJpYXQiOjE2NDkyMjY0MzAsIm5iZiI6MTY0OTIyNjQzMCwiZXhwIjoxNjgwNzYyNDI5LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.QFZK_5qiRTBJ9DV1j9E0sCwQSHyxzL8Vi1jjeOM0xBSYU9HhWf2d0DQIkEbgiFST6rBx4epot72rApEzIWqOC8yoONbejSSpjRF_o3HJ9m9_lBtTVoz24S7vKf2XK3cqqq_cCURDZSTvxtemPVXTLM7Vj7NvMUF6-d1F4h7QQpV05XDdXx5ZjQUgdrdssVZv_whqFEWepJukJHpvmmRetCiYmvaF-avEbIv15vJR2zvF8lQuC_R1L6xNbHA8a7r6IBHXA64ZLoV6ZfufdbfRNr5OsHSP6fLyi397xf4vAP8rm-NV5On7nzVccOaZ1m9uJsOM07aePvNy2bD2fXrmEq9FHYlqSQdOSDfjYwEMZ_mXfI6nS3_ps04tudFBP4XICE-MaNtB8UzsA4fUlVy9irEUCYL3HvYFVKWq2KGxmrrxbYCvLyMOq3F_SN9eHgH0Oo2Kms_VsdxnzjxosAkR1VY5awkWbGJd3Gw2rBbywpOcEIxQsYiPCizzG_ENgc0ZTsKpF5z4O8WU0qTt58CEn_5ifqo5gaLcai-GOtp9tLbU4QH9i9uUL5Bbewxtuf8LEefGuF3R3NdmNWdECYNfRmKTk0SlZzzPXgmdp2STjJWfleB8h1wwP_DolQe_FnGyaEVZoiRmmDOKOK0sWwb4Az6XY2a5WKpDm1A5JvHg3NI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/userDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"userDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

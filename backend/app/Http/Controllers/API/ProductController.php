@@ -137,6 +137,12 @@ class ProductController extends Controller
         if (!$info) {
             return response()->json(['error'=>'Invalid Information'], 401);
         }
+        $fileName = $info->image;
+        if ($fileName && $fileName!='default.png') {
+            if(file_exists(public_path('/images/products/'.$fileName))){
+                unlink(public_path('/images/products/'.$fileName)); // Removing Image from the path
+            }
+        }
         $info->delete();
 
         return response()->json(['success' => 'Product Deleted Successfully'], $this->successStatus);
