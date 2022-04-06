@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "e1836009-aaab-493a-ae90-f321ca34ae29",
 		"name": "Assignment",
-		"description": "## Assignment API Collection\n\nThis collection contains request from this \\[API\\]([http://127.0.0.1:8000](http://127.0.0.1:8000))\n\nIt contains following requests:\n\n*   Register a User\n*   Login a User with Given Credential\n*   Get Details for a user",
+		"description": "## Assignment API Collection\n\nThis collection contains request from this \\[API\\]([http://127.0.0.1:8000](http://127.0.0.1:8000))\n\nIt contains following requests:\n\n*   Register a User\n*   Login a User with Given Credential\n*   Get Details for a user\n*   Logout User\n*   Getting All Products\n*   Search Products\n*   Create New Product\n*   Show Product Information\n*   Update Product Information\n*   Delete a Product",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -53,7 +53,102 @@
 				},
 				"description": "API endpoint to ***Register*** a new User in the system.\n\n*   A successful registration will result in a ***HTTP 200*** *status code*"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Register User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "User",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user@application.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:25:40 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:25:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTQxZDYwMjRlMzM1YjdiNzdjMjMwMzJmZDBkNDc5ZThiZDAxYzljZWZhYTQ1OGE1MDA5Y2ExMWQ4MDJhNjFlMTBkY2U4ZmI5MzUzOTE0NDQiLCJpYXQiOjE2NDkyMjYzNDAsIm5iZiI6MTY0OTIyNjM0MCwiZXhwIjoxNjgwNzYyMzQwLCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.w_ryFbJb7vYTDq8DGCsqrrTi0gOnZ61VwWE6fTw2YK-IwMEQIifKI4Z94wz91bzbOWuNQ5F7do9W7y4N6s0fBVQ4jjWCFjEdmQfi4-fOM9ma8BkCsAkgOlcc_u9iVLj1PRod12R1pwJ4nRKK58L4_CC7wXQgdQFWORtGwnBYYn0eQV__rVIEzRqAzJKk2p3Sz51x92oeyzt_3tMcOaV8L8GUe5AqJrZfI4_oeK0xEHsUAA4R52Dnx-TbSiRzvI_oWD1s9J4hMHkTEH4LoB_C9oCABlyloaYLXmaucC4tkWMh21UPH-QDInn3wQsGCELmzN22Zumjdu5tx0P6jxHvBMpHOIA9wImJooE_8sXezflwo9oaSJ3aWfRVRgLHXihy7kqYr6eMh0a9r3OkhvQLzOqSSci0VjxdEndHDyOwaPP3YAU_HtifDXrnbC2HUsHvHSHHJAd_GjJ06BJij3vPRZcM86S8QQabmlTmfW_3Cjqoafvpkdaxlkd0UZZYtItjOSsHqMvcbd5Wxbomvx8cFkk0hJtNjSF2D7nTgoLMYFycR9xZu1AoVnuK1QoSMih78PV3jW9hrXWfoQzVvZYp5vDUmDAmAW2xHJaS4spKQDI7iqnVFz7iiGy5Yz2V-vspyfNpnA0aAqJM1sgYBpHyvV-vbyiM9NDzd9He21ZwWv4\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Login User",
@@ -90,9 +185,94 @@
 						"login"
 					]
 				},
-				"description": "API endpoint to ***Login*** a User with the provided credentials.\n\n*   A successful registration will result in a ***HTTP 200*** *status code*\n*   Request for non existing User will return ***HTTP 400*** status"
+				"description": "API endpoint to ***Login*** a User with the provided credentials.\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   Request for non existing User will return ***HTTP 400*** status"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@application.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:27:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:27:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTlkZWQ0YTNjOTFkMzVmMzA1N2UyMWQ4MTAxZDcxOGQxZjAwNWJjODg1ZjgwYzI4MTIyOGVkYThjMzdmMDI5NmRlYjg1ZjJjMzFjNjM0MjUiLCJpYXQiOjE2NDkyMjY0MzAsIm5iZiI6MTY0OTIyNjQzMCwiZXhwIjoxNjgwNzYyNDI5LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.QFZK_5qiRTBJ9DV1j9E0sCwQSHyxzL8Vi1jjeOM0xBSYU9HhWf2d0DQIkEbgiFST6rBx4epot72rApEzIWqOC8yoONbejSSpjRF_o3HJ9m9_lBtTVoz24S7vKf2XK3cqqq_cCURDZSTvxtemPVXTLM7Vj7NvMUF6-d1F4h7QQpV05XDdXx5ZjQUgdrdssVZv_whqFEWepJukJHpvmmRetCiYmvaF-avEbIv15vJR2zvF8lQuC_R1L6xNbHA8a7r6IBHXA64ZLoV6ZfufdbfRNr5OsHSP6fLyi397xf4vAP8rm-NV5On7nzVccOaZ1m9uJsOM07aePvNy2bD2fXrmEq9FHYlqSQdOSDfjYwEMZ_mXfI6nS3_ps04tudFBP4XICE-MaNtB8UzsA4fUlVy9irEUCYL3HvYFVKWq2KGxmrrxbYCvLyMOq3F_SN9eHgH0Oo2Kms_VsdxnzjxosAkR1VY5awkWbGJd3Gw2rBbywpOcEIxQsYiPCizzG_ENgc0ZTsKpF5z4O8WU0qTt58CEn_5ifqo5gaLcai-GOtp9tLbU4QH9i9uUL5Bbewxtuf8LEefGuF3R3NdmNWdECYNfRmKTk0SlZzzPXgmdp2STjJWfleB8h1wwP_DolQe_FnGyaEVZoiRmmDOKOK0sWwb4Az6XY2a5WKpDm1A5JvHg3NI\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Get User Details",
@@ -119,9 +299,918 @@
 						"api",
 						"userDetails"
 					]
-				}
+				},
+				"description": "API endpoint to ***Fetch*** information for a in the system\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   Request for non existing User will return ***HTTP 400*** status"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get User Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTlkZWQ0YTNjOTFkMzVmMzA1N2UyMWQ4MTAxZDcxOGQxZjAwNWJjODg1ZjgwYzI4MTIyOGVkYThjMzdmMDI5NmRlYjg1ZjJjMzFjNjM0MjUiLCJpYXQiOjE2NDkyMjY0MzAsIm5iZiI6MTY0OTIyNjQzMCwiZXhwIjoxNjgwNzYyNDI5LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.QFZK_5qiRTBJ9DV1j9E0sCwQSHyxzL8Vi1jjeOM0xBSYU9HhWf2d0DQIkEbgiFST6rBx4epot72rApEzIWqOC8yoONbejSSpjRF_o3HJ9m9_lBtTVoz24S7vKf2XK3cqqq_cCURDZSTvxtemPVXTLM7Vj7NvMUF6-d1F4h7QQpV05XDdXx5ZjQUgdrdssVZv_whqFEWepJukJHpvmmRetCiYmvaF-avEbIv15vJR2zvF8lQuC_R1L6xNbHA8a7r6IBHXA64ZLoV6ZfufdbfRNr5OsHSP6fLyi397xf4vAP8rm-NV5On7nzVccOaZ1m9uJsOM07aePvNy2bD2fXrmEq9FHYlqSQdOSDfjYwEMZ_mXfI6nS3_ps04tudFBP4XICE-MaNtB8UzsA4fUlVy9irEUCYL3HvYFVKWq2KGxmrrxbYCvLyMOq3F_SN9eHgH0Oo2Kms_VsdxnzjxosAkR1VY5awkWbGJd3Gw2rBbywpOcEIxQsYiPCizzG_ENgc0ZTsKpF5z4O8WU0qTt58CEn_5ifqo5gaLcai-GOtp9tLbU4QH9i9uUL5Bbewxtuf8LEefGuF3R3NdmNWdECYNfRmKTk0SlZzzPXgmdp2STjJWfleB8h1wwP_DolQe_FnGyaEVZoiRmmDOKOK0sWwb4Az6XY2a5WKpDm1A5JvHg3NI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/userDetails",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"userDetails"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:35:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:35:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": {\n        \"id\": 8,\n        \"role\": 1,\n        \"name\": \"User\",\n        \"email\": \"user@application.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-04-06T06:25:40.000000Z\",\n        \"updated_at\": \"2022-04-06T06:25:40.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTlkZWQ0YTNjOTFkMzVmMzA1N2UyMWQ4MTAxZDcxOGQxZjAwNWJjODg1ZjgwYzI4MTIyOGVkYThjMzdmMDI5NmRlYjg1ZjJjMzFjNjM0MjUiLCJpYXQiOjE2NDkyMjY0MzAsIm5iZiI6MTY0OTIyNjQzMCwiZXhwIjoxNjgwNzYyNDI5LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.QFZK_5qiRTBJ9DV1j9E0sCwQSHyxzL8Vi1jjeOM0xBSYU9HhWf2d0DQIkEbgiFST6rBx4epot72rApEzIWqOC8yoONbejSSpjRF_o3HJ9m9_lBtTVoz24S7vKf2XK3cqqq_cCURDZSTvxtemPVXTLM7Vj7NvMUF6-d1F4h7QQpV05XDdXx5ZjQUgdrdssVZv_whqFEWepJukJHpvmmRetCiYmvaF-avEbIv15vJR2zvF8lQuC_R1L6xNbHA8a7r6IBHXA64ZLoV6ZfufdbfRNr5OsHSP6fLyi397xf4vAP8rm-NV5On7nzVccOaZ1m9uJsOM07aePvNy2bD2fXrmEq9FHYlqSQdOSDfjYwEMZ_mXfI6nS3_ps04tudFBP4XICE-MaNtB8UzsA4fUlVy9irEUCYL3HvYFVKWq2KGxmrrxbYCvLyMOq3F_SN9eHgH0Oo2Kms_VsdxnzjxosAkR1VY5awkWbGJd3Gw2rBbywpOcEIxQsYiPCizzG_ENgc0ZTsKpF5z4O8WU0qTt58CEn_5ifqo5gaLcai-GOtp9tLbU4QH9i9uUL5Bbewxtuf8LEefGuF3R3NdmNWdECYNfRmKTk0SlZzzPXgmdp2STjJWfleB8h1wwP_DolQe_FnGyaEVZoiRmmDOKOK0sWwb4Az6XY2a5WKpDm1A5JvHg3NI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "API endpoint to ***logout*** a logged in user from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   Request for non existing User will return ***HTTP 400*** status"
+			},
+			"response": [
+				{
+					"name": "Logout User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTlkZWQ0YTNjOTFkMzVmMzA1N2UyMWQ4MTAxZDcxOGQxZjAwNWJjODg1ZjgwYzI4MTIyOGVkYThjMzdmMDI5NmRlYjg1ZjJjMzFjNjM0MjUiLCJpYXQiOjE2NDkyMjY0MzAsIm5iZiI6MTY0OTIyNjQzMCwiZXhwIjoxNjgwNzYyNDI5LCJzdWIiOiI4Iiwic2NvcGVzIjpbXX0.QFZK_5qiRTBJ9DV1j9E0sCwQSHyxzL8Vi1jjeOM0xBSYU9HhWf2d0DQIkEbgiFST6rBx4epot72rApEzIWqOC8yoONbejSSpjRF_o3HJ9m9_lBtTVoz24S7vKf2XK3cqqq_cCURDZSTvxtemPVXTLM7Vj7NvMUF6-d1F4h7QQpV05XDdXx5ZjQUgdrdssVZv_whqFEWepJukJHpvmmRetCiYmvaF-avEbIv15vJR2zvF8lQuC_R1L6xNbHA8a7r6IBHXA64ZLoV6ZfufdbfRNr5OsHSP6fLyi397xf4vAP8rm-NV5On7nzVccOaZ1m9uJsOM07aePvNy2bD2fXrmEq9FHYlqSQdOSDfjYwEMZ_mXfI6nS3_ps04tudFBP4XICE-MaNtB8UzsA4fUlVy9irEUCYL3HvYFVKWq2KGxmrrxbYCvLyMOq3F_SN9eHgH0Oo2Kms_VsdxnzjxosAkR1VY5awkWbGJd3Gw2rBbywpOcEIxQsYiPCizzG_ENgc0ZTsKpF5z4O8WU0qTt58CEn_5ifqo5gaLcai-GOtp9tLbU4QH9i9uUL5Bbewxtuf8LEefGuF3R3NdmNWdECYNfRmKTk0SlZzzPXgmdp2STjJWfleB8h1wwP_DolQe_FnGyaEVZoiRmmDOKOK0sWwb4Az6XY2a5WKpDm1A5JvHg3NI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:46:01 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:46:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"Logout Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/allProducts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"allProducts"
+					]
+				},
+				"description": "API endpoint to see all the ***Products*** from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*"
+			},
+			"response": [
+				{
+					"name": "Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/allProducts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"allProducts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:53:39 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:53:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": [\n        {\n            \"id\": 21,\n            \"name\": \"Mouse\",\n            \"image\": \"689_1649167556.jpg\",\n            \"price\": 600\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Printer\",\n            \"image\": \"463_1649167541.jpg\",\n            \"price\": 7500\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Bag\",\n            \"image\": \"964_1649167526.jpg\",\n            \"price\": 800\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Laptop\",\n            \"image\": \"551_1649167039.jpg\",\n            \"price\": 90000\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Desktop\",\n            \"image\": \"224_1649167397.jpg\",\n            \"price\": 50000\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Shoe\",\n            \"image\": \"394_1649021894.jpg\",\n            \"price\": 650\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Shirt\",\n            \"image\": \"384_1649015276.jpg\",\n            \"price\": 3463456\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Pent\",\n            \"image\": \"761_1649167156.jpg\",\n            \"price\": 950\n        },\n        {\n            \"id\": 11,\n            \"name\": \"TV\",\n            \"image\": \"311_1649167213.jpg\",\n            \"price\": 65750\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Tablet\",\n            \"image\": \"774_1649167255.jpg\",\n            \"price\": 15000\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Freeze\",\n            \"image\": \"269_1649167438.png\",\n            \"price\": 22000\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Camera\",\n            \"image\": \"614_1649167481.jpg\",\n            \"price\": 5500\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Fan\",\n            \"image\": \"39_1648838253.jpg\",\n            \"price\": 5000\n        },\n        {\n            \"id\": 3,\n            \"name\": \"mobile\",\n            \"image\": \"341_1648838215.jpg\",\n            \"price\": 1500\n        },\n        {\n            \"id\": 2,\n            \"name\": \"watch\",\n            \"image\": \"451_1648753783.png\",\n            \"price\": 600\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/allProducts?search=Bag",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"allProducts"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Bag"
+						}
+					]
+				},
+				"description": "API endpoint to ***Search*** some particular Products from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*"
+			},
+			"response": [
+				{
+					"name": "Search Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/allProducts?search=Bag",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"allProducts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Bag"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:55:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 06:55:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": [\n        {\n            \"id\": 19,\n            \"name\": \"Bag\",\n            \"image\": \"964_1649167526.jpg\",\n            \"price\": 800\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create New Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBjZTdhY2E4OGE4ZTI1MzBiMDlkODVhMzRjMmQwZmE4NDdkZmJlNzA4Y2IwNjQ4Y2M0ODFiMzE4NGM3MDk3ZmQyMDBkYTFlMGY2MGZjYmMiLCJpYXQiOjE2NDkyMjg0NzMsIm5iZiI6MTY0OTIyODQ3MywiZXhwIjoxNjgwNzY0NDczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XuxMFeNcTGKbd1fh0lgANmDuiKKv_5L6cLn3Vg2XFixfKWpRsoUDByKA_5cIQpmllv1--3KP_5wuXlepX7Clq3nTuyvRpbdnB0xeN_jlAU7LHKZNDGroJtABilkmtoebsCcBB0jdCLQo7vAovH81dbi8PsMoz2QPYb0IhKpHQu5pf-iPHmo_wnSb8XxcotSD4aQ9GZsAlzpOj-T_PkMCJ0OUaufOpIjAs1mz6IqcUEgvtJ0mxQgiqKkb43uIePjwt3_GENurW3F7B4UB9voEf5tMaS0jSaNjwpkJmSQgPZ5ToxWeaskH-WeNHD7nn5FczV42YEBBF2JMcZku854FceBhzvo2lJY_MhmPGsBdUZKBw9bTNhRaQnrG29xRv2bBsXgIXIGOmw1I3QhHWFJMChy8xxhq0JCRS8FyNTEshNaNuGtme1qIT5egoJeb8oEf-0-WiCezh4zgm6C4s-cUYgcXC6j8tiMLR-y66kWcBwtGC3lnIn4vMeLKW1qsihfkVVjsk9WE6SfSgcWf8VVkAbHoroka-nsZiXdDDCanmt-auVDWVWGdEdtYDlxZAuUVS8sZ5I74rqLRKQJ9MT04L5DMYFij-DXiv-_3Nsc9sSauHsPeZym5zzBZ8gskd_6kgT2Z1alr7sr6mUM4VfCLrGAmD9tFBehz1YldyGynyW8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bag",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/E:/xampp/htdocs/Assignment-Zepto Apps/Assignment-ZeptoApps/backend/public/images/products/964_1649167526.jpg"
+						},
+						{
+							"key": "price",
+							"value": "860",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "API endpoint to ***logout*** a logged in user from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   The errors will return **HTTP 401** status\n*   Only the Authenticated Admin can make this request."
+			},
+			"response": [
+				{
+					"name": "Create New Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBjZTdhY2E4OGE4ZTI1MzBiMDlkODVhMzRjMmQwZmE4NDdkZmJlNzA4Y2IwNjQ4Y2M0ODFiMzE4NGM3MDk3ZmQyMDBkYTFlMGY2MGZjYmMiLCJpYXQiOjE2NDkyMjg0NzMsIm5iZiI6MTY0OTIyODQ3MywiZXhwIjoxNjgwNzY0NDczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XuxMFeNcTGKbd1fh0lgANmDuiKKv_5L6cLn3Vg2XFixfKWpRsoUDByKA_5cIQpmllv1--3KP_5wuXlepX7Clq3nTuyvRpbdnB0xeN_jlAU7LHKZNDGroJtABilkmtoebsCcBB0jdCLQo7vAovH81dbi8PsMoz2QPYb0IhKpHQu5pf-iPHmo_wnSb8XxcotSD4aQ9GZsAlzpOj-T_PkMCJ0OUaufOpIjAs1mz6IqcUEgvtJ0mxQgiqKkb43uIePjwt3_GENurW3F7B4UB9voEf5tMaS0jSaNjwpkJmSQgPZ5ToxWeaskH-WeNHD7nn5FczV42YEBBF2JMcZku854FceBhzvo2lJY_MhmPGsBdUZKBw9bTNhRaQnrG29xRv2bBsXgIXIGOmw1I3QhHWFJMChy8xxhq0JCRS8FyNTEshNaNuGtme1qIT5egoJeb8oEf-0-WiCezh4zgm6C4s-cUYgcXC6j8tiMLR-y66kWcBwtGC3lnIn4vMeLKW1qsihfkVVjsk9WE6SfSgcWf8VVkAbHoroka-nsZiXdDDCanmt-auVDWVWGdEdtYDlxZAuUVS8sZ5I74rqLRKQJ9MT04L5DMYFij-DXiv-_3Nsc9sSauHsPeZym5zzBZ8gskd_6kgT2Z1alr7sr6mUM4VfCLrGAmD9tFBehz1YldyGynyW8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Bag",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/xampp/htdocs/Assignment-Zepto Apps/Assignment-ZeptoApps/backend/public/images/products/964_1649167526.jpg"
+								},
+								{
+									"key": "price",
+									"value": "860",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:03:21 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:03:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"Product Stored Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Show Product Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/productDetails/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"productDetails",
+						"22"
+					]
+				},
+				"description": "API endpoint to ***show*** the ***Details*** of a product from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   The errors will return **HTTP 401** status"
+			},
+			"response": [
+				{
+					"name": "Show Product Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/productDetails/22",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"productDetails",
+								"22"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:16:03 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:16:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": {\n        \"id\": 22,\n        \"name\": \"Bag\",\n        \"image\": \"234_1649228601.jpg\",\n        \"price\": 950,\n        \"created_at\": \"2022-04-06T07:03:21.000000Z\",\n        \"updated_at\": \"2022-04-06T07:10:57.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Product Info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBjZTdhY2E4OGE4ZTI1MzBiMDlkODVhMzRjMmQwZmE4NDdkZmJlNzA4Y2IwNjQ4Y2M0ODFiMzE4NGM3MDk3ZmQyMDBkYTFlMGY2MGZjYmMiLCJpYXQiOjE2NDkyMjg0NzMsIm5iZiI6MTY0OTIyODQ3MywiZXhwIjoxNjgwNzY0NDczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XuxMFeNcTGKbd1fh0lgANmDuiKKv_5L6cLn3Vg2XFixfKWpRsoUDByKA_5cIQpmllv1--3KP_5wuXlepX7Clq3nTuyvRpbdnB0xeN_jlAU7LHKZNDGroJtABilkmtoebsCcBB0jdCLQo7vAovH81dbi8PsMoz2QPYb0IhKpHQu5pf-iPHmo_wnSb8XxcotSD4aQ9GZsAlzpOj-T_PkMCJ0OUaufOpIjAs1mz6IqcUEgvtJ0mxQgiqKkb43uIePjwt3_GENurW3F7B4UB9voEf5tMaS0jSaNjwpkJmSQgPZ5ToxWeaskH-WeNHD7nn5FczV42YEBBF2JMcZku854FceBhzvo2lJY_MhmPGsBdUZKBw9bTNhRaQnrG29xRv2bBsXgIXIGOmw1I3QhHWFJMChy8xxhq0JCRS8FyNTEshNaNuGtme1qIT5egoJeb8oEf-0-WiCezh4zgm6C4s-cUYgcXC6j8tiMLR-y66kWcBwtGC3lnIn4vMeLKW1qsihfkVVjsk9WE6SfSgcWf8VVkAbHoroka-nsZiXdDDCanmt-auVDWVWGdEdtYDlxZAuUVS8sZ5I74rqLRKQJ9MT04L5DMYFij-DXiv-_3Nsc9sSauHsPeZym5zzBZ8gskd_6kgT2Z1alr7sr6mUM4VfCLrGAmD9tFBehz1YldyGynyW8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bag",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "price",
+							"value": "950",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateProduct/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateProduct",
+						"22"
+					]
+				},
+				"description": "API endpoint to U***pdate*** the ***Details*** of a product from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   The errors will return **HTTP 401** status\n*   Only the Authenticated Admin can make this request."
+			},
+			"response": [
+				{
+					"name": "Update Product Info",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBjZTdhY2E4OGE4ZTI1MzBiMDlkODVhMzRjMmQwZmE4NDdkZmJlNzA4Y2IwNjQ4Y2M0ODFiMzE4NGM3MDk3ZmQyMDBkYTFlMGY2MGZjYmMiLCJpYXQiOjE2NDkyMjg0NzMsIm5iZiI6MTY0OTIyODQ3MywiZXhwIjoxNjgwNzY0NDczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XuxMFeNcTGKbd1fh0lgANmDuiKKv_5L6cLn3Vg2XFixfKWpRsoUDByKA_5cIQpmllv1--3KP_5wuXlepX7Clq3nTuyvRpbdnB0xeN_jlAU7LHKZNDGroJtABilkmtoebsCcBB0jdCLQo7vAovH81dbi8PsMoz2QPYb0IhKpHQu5pf-iPHmo_wnSb8XxcotSD4aQ9GZsAlzpOj-T_PkMCJ0OUaufOpIjAs1mz6IqcUEgvtJ0mxQgiqKkb43uIePjwt3_GENurW3F7B4UB9voEf5tMaS0jSaNjwpkJmSQgPZ5ToxWeaskH-WeNHD7nn5FczV42YEBBF2JMcZku854FceBhzvo2lJY_MhmPGsBdUZKBw9bTNhRaQnrG29xRv2bBsXgIXIGOmw1I3QhHWFJMChy8xxhq0JCRS8FyNTEshNaNuGtme1qIT5egoJeb8oEf-0-WiCezh4zgm6C4s-cUYgcXC6j8tiMLR-y66kWcBwtGC3lnIn4vMeLKW1qsihfkVVjsk9WE6SfSgcWf8VVkAbHoroka-nsZiXdDDCanmt-auVDWVWGdEdtYDlxZAuUVS8sZ5I74rqLRKQJ9MT04L5DMYFij-DXiv-_3Nsc9sSauHsPeZym5zzBZ8gskd_6kgT2Z1alr7sr6mUM4VfCLrGAmD9tFBehz1YldyGynyW8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Bag",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "price",
+									"value": "950",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/updateProduct/22",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"updateProduct",
+								"22"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:10:57 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:10:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"Product details Updated Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBjZTdhY2E4OGE4ZTI1MzBiMDlkODVhMzRjMmQwZmE4NDdkZmJlNzA4Y2IwNjQ4Y2M0ODFiMzE4NGM3MDk3ZmQyMDBkYTFlMGY2MGZjYmMiLCJpYXQiOjE2NDkyMjg0NzMsIm5iZiI6MTY0OTIyODQ3MywiZXhwIjoxNjgwNzY0NDczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XuxMFeNcTGKbd1fh0lgANmDuiKKv_5L6cLn3Vg2XFixfKWpRsoUDByKA_5cIQpmllv1--3KP_5wuXlepX7Clq3nTuyvRpbdnB0xeN_jlAU7LHKZNDGroJtABilkmtoebsCcBB0jdCLQo7vAovH81dbi8PsMoz2QPYb0IhKpHQu5pf-iPHmo_wnSb8XxcotSD4aQ9GZsAlzpOj-T_PkMCJ0OUaufOpIjAs1mz6IqcUEgvtJ0mxQgiqKkb43uIePjwt3_GENurW3F7B4UB9voEf5tMaS0jSaNjwpkJmSQgPZ5ToxWeaskH-WeNHD7nn5FczV42YEBBF2JMcZku854FceBhzvo2lJY_MhmPGsBdUZKBw9bTNhRaQnrG29xRv2bBsXgIXIGOmw1I3QhHWFJMChy8xxhq0JCRS8FyNTEshNaNuGtme1qIT5egoJeb8oEf-0-WiCezh4zgm6C4s-cUYgcXC6j8tiMLR-y66kWcBwtGC3lnIn4vMeLKW1qsihfkVVjsk9WE6SfSgcWf8VVkAbHoroka-nsZiXdDDCanmt-auVDWVWGdEdtYDlxZAuUVS8sZ5I74rqLRKQJ9MT04L5DMYFij-DXiv-_3Nsc9sSauHsPeZym5zzBZ8gskd_6kgT2Z1alr7sr6mUM4VfCLrGAmD9tFBehz1YldyGynyW8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"22"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "API endpoint to ***Delete*** a product from the system\n\n*   A successful API request will return ***HTTP 200*** *status code*\n*   The errors will return **HTTP 401** status\n*   Only the Authenticated Admin can make this request."
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBjZTdhY2E4OGE4ZTI1MzBiMDlkODVhMzRjMmQwZmE4NDdkZmJlNzA4Y2IwNjQ4Y2M0ODFiMzE4NGM3MDk3ZmQyMDBkYTFlMGY2MGZjYmMiLCJpYXQiOjE2NDkyMjg0NzMsIm5iZiI6MTY0OTIyODQ3MywiZXhwIjoxNjgwNzY0NDczLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XuxMFeNcTGKbd1fh0lgANmDuiKKv_5L6cLn3Vg2XFixfKWpRsoUDByKA_5cIQpmllv1--3KP_5wuXlepX7Clq3nTuyvRpbdnB0xeN_jlAU7LHKZNDGroJtABilkmtoebsCcBB0jdCLQo7vAovH81dbi8PsMoz2QPYb0IhKpHQu5pf-iPHmo_wnSb8XxcotSD4aQ9GZsAlzpOj-T_PkMCJ0OUaufOpIjAs1mz6IqcUEgvtJ0mxQgiqKkb43uIePjwt3_GENurW3F7B4UB9voEf5tMaS0jSaNjwpkJmSQgPZ5ToxWeaskH-WeNHD7nn5FczV42YEBBF2JMcZku854FceBhzvo2lJY_MhmPGsBdUZKBw9bTNhRaQnrG29xRv2bBsXgIXIGOmw1I3QhHWFJMChy8xxhq0JCRS8FyNTEshNaNuGtme1qIT5egoJeb8oEf-0-WiCezh4zgm6C4s-cUYgcXC6j8tiMLR-y66kWcBwtGC3lnIn4vMeLKW1qsihfkVVjsk9WE6SfSgcWf8VVkAbHoroka-nsZiXdDDCanmt-auVDWVWGdEdtYDlxZAuUVS8sZ5I74rqLRKQJ9MT04L5DMYFij-DXiv-_3Nsc9sSauHsPeZym5zzBZ8gskd_6kgT2Z1alr7sr6mUM4VfCLrGAmD9tFBehz1YldyGynyW8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/22",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"22"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:20:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Apr 2022 07:20:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"Product Deleted Successfully\"\n}"
+				}
+			]
 		}
 	]
 }
